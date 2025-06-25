@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Name - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Overlock+SC&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
       * {
@@ -16,10 +20,16 @@
             rgba(0, 0, 0, 0.7),
             rgba(0, 0, 0, 0.9)
           ),
-          url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+          url("./assests/img14.jpg");
         background-size: cover;
-        background-position: center;
+        background-position: center top;
         background-attachment: fixed;
+      }
+
+      @media (min-width: 1600px) {
+        .hero-bg {
+          background-position: center 5%;
+        }
       }
 
       .card-hover {
@@ -55,7 +65,7 @@
       }
 
       .gradient-text {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #000414 0%, #4e4141 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -152,10 +162,10 @@
     >
       <div class="text-center text-white px-4 max-w-4xl mx-auto">
         <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in">
-          Hi, I'm <span class="text-orange-400">Dibyendu Das</span>
+          Hi, I'm <span class="text-orange-600">Dibyendu Das</span>
         </h1>
         <p class="text-xl md:text-2xl mb-8 fade-in delay-1 text-gray-200">
-          Full Stack Developer
+          Full Stack Developer.
         </p>
         <p
           class="text-lg mb-12 fade-in delay-2 max-w-2xl mx-auto text-gray-300"
@@ -245,7 +255,7 @@
               class="w-full h-96 bg-gradient-to-br from-orange-600 to-purple-600 rounded-2xl transform rotate-3"
             ></div>
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              src="assests/ddImg.png"
               alt="Profile"
               class="absolute inset-0 w-full h-96 object-cover rounded-2xl transform -rotate-3 shadow-2xl"
             />
@@ -261,37 +271,49 @@
             <div
               class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
-              <div class="text-3xl mb-2">⚛️</div>
+              <div class="text-3xl mb-2">
+                <i class="fa-brands fa-react"></i>
+              </div>
               <div class="text-sm font-semibold text-gray-700">React</div>
             </div>
             <div
               class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
-              <div class="text-3xl mb-2">🟢</div>
+              <div class="text-3xl mb-2">
+                <i class="fa-brands fa-node-js"></i>
+              </div>
               <div class="text-sm font-semibold text-gray-700">Node.js</div>
             </div>
             <div
               class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
-              <div class="text-3xl mb-2">🐍</div>
+              <div class="text-3xl mb-2">
+                <i class="fa-brands fa-python"></i>
+              </div>
               <div class="text-sm font-semibold text-gray-700">Python</div>
             </div>
             <div
               class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
-              <div class="text-3xl mb-2">💾</div>
-              <div class="text-sm font-semibold text-gray-700">MongoDB</div>
+              <div class="text-3xl mb-2">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <div class="text-sm font-semibold text-gray-700">Mysql & MongoDB</div>
             </div>
             <div
               class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
-              <div class="text-3xl mb-2">🎨</div>
-              <div class="text-sm font-semibold text-gray-700">Figma</div>
+              <div class="text-3xl mb-2">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="text-sm font-semibold text-gray-700">Devops</div>
             </div>
             <div
               class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
-              <div class="text-3xl mb-2">☁️</div>
+              <div class="text-3xl mb-2">
+                <i class="fa-brands fa-aws"></i>
+              </div>
               <div class="text-sm font-semibold text-gray-700">AWS</div>
             </div>
           </div>
@@ -493,7 +515,12 @@
                 </div>
                 <div>
                   <h3 class="text-lg font-semibold text-gray-900">Email</h3>
-                  <p class="text-gray-600">your.email@example.com</p>
+                  <p
+                    class="text-gray-600 lowercase"
+                    style="text-transform: none; font-family: Arial, sans-serif"
+                  >
+                    ddas4548@gmail.com
+                  </p>
                 </div>
               </div>
 
@@ -523,23 +550,13 @@
                 </div>
                 <div>
                   <h3 class="text-lg font-semibold text-gray-900">Location</h3>
-                  <p class="text-gray-600">Your City, Country</p>
+                  <p class="text-gray-600">Malda, West Bengal, India</p>
                 </div>
               </div>
 
               <div class="flex space-x-4">
                 <a
-                  href="#"
-                  class="w-12 h-12 bg-gray-100 hover:bg-orange-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="#"
+                  href="https://www.linkedin.com/in/Dibyendu-dev"
                   class="w-12 h-12 bg-gray-100 hover:bg-orange-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -549,7 +566,7 @@
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/Dibyendu-dev"
                   class="w-12 h-12 bg-gray-100 hover:bg-orange-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -602,16 +619,16 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-orange-600 text-black py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <div class="text-2xl font-bold gradient-text mb-4">Your Name</div>
-          <p class="text-gray-400 mb-6">
+          <div class="text-2xl font-bold gradient-text mb-4">Dibyendu Das</div>
+          <p class="text-black mb-6">
             Building the future, one line of code at a time.
           </p>
           <div class="border-t border-gray-800 pt-6">
-            <p class="text-gray-400">
-              &copy; 2025 Your Name. All rights reserved.
+            <p class="text-black">
+              &copy; 2025 Dibyendu Das. All rights reserved.
             </p>
           </div>
         </div>
