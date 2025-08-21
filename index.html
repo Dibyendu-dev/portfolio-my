@@ -352,16 +352,48 @@
             />
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 mb-2">
-                Booking rooms App
+                Microservice based Hotel Booking Platform.
               </h3>
-              <p class="text-gray-600 mb-4">
-                A full-featured booking platform built with Node.js and mysql,
-                featuring idempotent api.
-              </p>
+              <div class="relative">
+                <div
+                  id="desc-short"
+                  class="text-gray-600 mb-4 max-h-32 overflow-hidden transition-all duration-300"
+                >
+                  Go-powered auth gateway + Express/TypeScript services like
+                  booking, review, hotel, notification service.<br />
+                  JWT authentication with reverse-proxy routing to securely
+                  centralize access across services.<br />
+                  Guaranteed exactly-once bookings at scale by combining
+                  idempotency keys with Redis Redlock distributed locking,
+                  eliminating race conditions and concurrent double-booking
+                  risks.<br />
+                  Decoupled critical flows with async processing. Redis-backed
+                  queues for notifications and an event-driven review service to
+                  update hotel ratings without impacting checkout latency.<br />
+                  Hardened operations & data integrity via database migrations
+                  for versioned schema changes and cron-driven room inventory
+                  generation to keep future availability.
+                </div>
+                <div
+                  id="desc-gradient"
+                  class="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-white to-transparent pointer-events-none"
+                ></div>
+                <button
+                  id="learn-more-btn"
+                  class="mt-2 text-orange-600 hover:text-orange-800 font-semibold transition-colors duration-300 underline"
+                >
+                  Learn More
+                </button>
+              </div>
+
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
                   class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full"
                   >Node.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full"
+                  >Golang</span
                 >
                 <span
                   class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full"
@@ -384,7 +416,7 @@
                   >Live Demo</a
                 >
                 <a
-                  href="#"
+                  href="https://github.com/Dibyendu-dev/airbnb_dev"
                   class="text-gray-600 hover:text-gray-800 font-semibold transition-colors duration-300"
                   >GitHub</a
                 >
@@ -402,7 +434,8 @@
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 mb-2">Chat App</h3>
               <p class="text-gray-600 mb-4">
-                A collaborative chat application using node.js and socket.io, scaling through kafka.
+                A collaborative chat application using node.js and socket.io,
+                scaling through kafka.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
@@ -419,7 +452,7 @@
                 >
               </div>
 
-               <div class="py-2">
+              <div class="py-2">
                 <p text-red mb-4>Work in progress ..</p>
               </div>
 
@@ -430,7 +463,7 @@
                   >Live Demo</a
                 >
                 <a
-                  href="#"
+                  href="https://github.com/Dibyendu-dev/Chat-chat"
                   class="text-gray-600 hover:text-gray-800 font-semibold transition-colors duration-300"
                   >GitHub</a
                 >
@@ -448,7 +481,7 @@
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 mb-2">LMS App</h3>
               <p class="text-gray-600 mb-4">
-                A Full stack Learning managment system  with payment intregation.
+                A Full stack Learning managment system with payment intregation.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
@@ -465,7 +498,7 @@
                 >
               </div>
 
-               <div class="py-2">
+              <div class="py-2">
                 <p text-red mb-4>Work in progress ..</p>
               </div>
 
@@ -728,6 +761,28 @@
           );
           this.reset();
         });
+
+      // Learn More button logic for first project card
+      document.addEventListener("DOMContentLoaded", function () {
+        var btn = document.getElementById("learn-more-btn");
+        var desc = document.getElementById("desc-short");
+        var gradient = document.getElementById("desc-gradient");
+        var expanded = false;
+        if (btn && desc && gradient) {
+          btn.addEventListener("click", function () {
+            expanded = !expanded;
+            if (expanded) {
+              desc.classList.remove("max-h-32", "overflow-hidden");
+              gradient.style.display = "none";
+              btn.textContent = "Show Less";
+            } else {
+              desc.classList.add("max-h-32", "overflow-hidden");
+              gradient.style.display = "";
+              btn.textContent = "Learn More";
+            }
+          });
+        }
+      });
     </script>
   </body>
 </html>
